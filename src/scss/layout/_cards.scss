@@ -6,9 +6,10 @@
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: cover;
-    color: v.$lightviolet;
+    color: v.$lightViolet;
     padding: 2rem 1.5rem 0 1.5rem;
     height: 35vh;
+    max-height: 23rem;
     margin-bottom: 10rem;
 
     @include m.tablet {
@@ -17,8 +18,10 @@
     
     img {
         display: inline-block;
+        max-width: 30rem;
         width: 83%;
     }
+
     .illustration_card-back {
         text-align: right;
         position: relative;
@@ -46,8 +49,12 @@
             position: absolute;
             top: 8.5rem;
             left: 2rem;
-            font-size: 2.2rem;
+            font-size: 2rem;
             letter-spacing: .2rem;
+
+            @include m.mobile {
+                font-size: 2.2rem;
+            }
         }
 
         .illustration_card-front--name {
@@ -61,7 +68,7 @@
         .illustration_card-front--cvc {
             position: absolute;
             top: 13rem;
-            right: 9rem;
+            right: 8.5rem;
             font-size: 1.2rem;
         }
     }

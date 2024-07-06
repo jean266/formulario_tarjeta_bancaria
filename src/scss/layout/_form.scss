@@ -1,1 +1,55 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
 
+.container_form {
+    padding: 0 2.5rem 5rem 2.5rem;
+}
+
+.form {
+    width: 100%;
+
+    .form_input {
+
+        label,
+        input {
+            display: block;
+            width: 100%;
+        }
+
+        label {
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+        
+        input {
+            border: 1px solid v.$darkViolet;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+            
+            &::placeholder {
+                color: v.$lightViolet;
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .form_date,
+    .form_input-date {
+        display: flex;
+        gap: 1.5rem;
+
+        div {
+            flex: 1;
+        }
+    }
+
+    .submit {
+        @include m.boton(v.$veryDarkViolet, inline-block);
+        width: 100%;
+        padding: 1.5rem;
+        font-size: 1.8rem;
+        margin-top: 1rem;
+    }
+}
