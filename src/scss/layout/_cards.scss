@@ -1,0 +1,68 @@
+@use 'base/variables.scss' as v;
+@use 'base/mixins' as m;
+
+.illustration {
+    background-image: url(../../../public/assets/images/bg-main-mobile.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+    color: v.$lightviolet;
+    padding: 2rem 1.5rem 0 1.5rem;
+    height: 35vh;
+    margin-bottom: 10rem;
+
+    @include m.tablet {
+        background-image: url(../../../public/assets/images/bg-main-desktop.png);
+    }
+    
+    img {
+        display: inline-block;
+        width: 83%;
+    }
+    .illustration_card-back {
+        text-align: right;
+        position: relative;
+        
+        p {
+            position: absolute;
+            top: 7.5rem;
+            right: 4rem;
+            font-size: 1.3rem;
+        }
+    }
+    
+    .illustration_card-front {
+        position: relative;
+        margin-top: -7.3rem;
+        
+        .illustration_card-front--icon {
+            position: absolute;
+            width: 6rem;
+            top: 2rem;
+            left: 2rem;
+        }
+
+        .illustration_card-front--number {
+            position: absolute;
+            top: 8.5rem;
+            left: 2rem;
+            font-size: 2.2rem;
+            letter-spacing: .2rem;
+        }
+
+        .illustration_card-front--name {
+            position: absolute;
+            top: 13rem;
+            left: 2rem;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+        }
+
+        .illustration_card-front--cvc {
+            position: absolute;
+            top: 13rem;
+            right: 9rem;
+            font-size: 1.2rem;
+        }
+    }
+}
