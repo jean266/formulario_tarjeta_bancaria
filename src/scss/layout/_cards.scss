@@ -2,74 +2,218 @@
 @use 'base/mixins' as m;
 
 .illustration {
-    background-image: url(../../../public/assets/images/bg-main-mobile.png);
+    background-image: url(../../assets/images/bg-main-mobile.png);
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: cover;
-    color: v.$lightViolet;
-    padding: 2rem 1.5rem 0 1.5rem;
-    height: 35vh;
-    max-height: 23rem;
-    margin-bottom: 10rem;
+    color: v.$white;
+    padding: 2.5rem 1.5rem 0 1.5rem;
+    height: 20rem;
+    margin-bottom: 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    @media (min-width: 451px) {
+        padding-top: 4rem;
+        height: 24rem;
+        margin-bottom: 13rem;
+    }
 
-    @include m.tablet {
-        background-image: url(../../../public/assets/images/bg-main-desktop.png);
+    @media (min-width: 951px) {
+        background-image: url(../../assets/images/bg-main-desktop.png);
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+        justify-content: center;
+        flex-direction: column-reverse;
+        gap: 1.5rem;
     }
     
     img {
         display: inline-block;
-        max-width: 30rem;
-        width: 83%;
+        width: 25rem;
+        
+        @media (min-width: 451px) {
+            width: 28rem;
+        }
+        
+        @media (min-width: 951px) {
+            width: 30rem;
+        }
+        
+        @media (min-width: 1100px) {
+            width: 35rem;
+        }
+    }
+}
+
+.container_card-back {
+    padding-left: 5rem;
+    
+    @media (min-width: 451px) {
+        padding-left: 6rem;
+    }
+    
+    @media (min-width: 951px) {
+        padding-left: 0;
+        margin-right: -32rem;
+    }
+    
+    @media (min-width: 1100px) {
+        margin-right: -42rem;
     }
 
     .illustration_card-back {
-        text-align: right;
+        width: max-content;
+        display: inline-block;
         position: relative;
         
         p {
             position: absolute;
-            top: 7.5rem;
-            right: 4rem;
-            font-size: 1.3rem;
+            top: 6.3rem;
+            right: 3rem;
+            font-size: .9rem;
+            letter-spacing: 1px;
+            
+            @media (min-width: 451px) {
+                top: 6.8rem;
+                right: 3.3rem;
+                font-size: 1.2rem;
+            }
+            
+            @media (min-width: 951px) {
+                top: 7.3rem;
+                right: 4rem;
+                font-size: 1.2rem;
+            }
+            
+            @media (min-width: 1100px) {
+                top: 8.7rem;
+                right: 4.2rem;
+                font-size: 1.3rem;
+            }
         }
     }
+}
+
+.container_card-front {
+    padding-right: 5rem;
     
+    @media (min-width: 451px) {
+        padding-right: 6rem;
+    }
+
+    @media (min-width: 951px) {
+        padding: 0;
+        margin-right: -18rem;
+    }
+
+    @media (min-width: 1100px) {
+        margin-right: -28rem;
+    }
+
     .illustration_card-front {
+        width: max-content;
+        display: inline-block;
         position: relative;
-        margin-top: -7.3rem;
+        margin-top: -6.2rem;
         
-        .illustration_card-front--icon {
-            position: absolute;
-            width: 6rem;
-            top: 2rem;
-            left: 2rem;
+        @media (min-width: 451px) {
+            margin-top: -7rem;
         }
 
-        .illustration_card-front--number {
+        @media (min-width: 951px) {
+            margin-top: 0;
+        }
+        
+        .illustration_card-front--icon,
+        .illustration_card-front--number,
+        .illustration_card-front--name {
             position: absolute;
-            top: 8.5rem;
-            left: 2rem;
-            font-size: 2rem;
-            letter-spacing: .2rem;
+            left: 1.8rem;
+            
+            @media (min-width: 451px) {
+                left: 2rem;
+            }
 
-            @include m.mobile {
-                font-size: 2.2rem;
+            @media (min-width: 951px) {
+                margin-top: 0;
             }
         }
 
-        .illustration_card-front--name {
-            position: absolute;
-            top: 13rem;
-            left: 2rem;
-            font-size: 1.2rem;
+        .illustration_card-front--icon {
+            width: 4rem;
+            top: 1.8rem;
+            
+            @media (min-width: 451px) {
+                width: 5rem;
+            }
+            
+            @media (min-width: 951px) {
+                width: 5.5rem;
+            }
+            
+            @media (min-width: 1100px) {
+                width: 6rem;
+                top: 2.2rem;
+            }
+        }
+
+        .illustration_card-front--number {
+            top: 7.5rem;
+            font-size: 1.54rem;
+            letter-spacing: .2rem;
+            
+            @media (min-width: 451px) {
+                top: 8.5rem;
+                font-size: 1.75rem;
+            }
+            
+            @media (min-width: 951px) {
+                top: 9.5rem;
+                font-size: 1.95rem;
+            }
+
+            @media (min-width: 1100px) {
+                top: 11rem;
+                font-size: 2.4rem;
+            }
+        }
+
+        .illustration_card-front--name,
+        .illustration_card-front--cvc {
+            top: 11rem;
+            font-size: .9rem;
             text-transform: uppercase;
+            
+            @media (min-width: 451px) {
+                top: 12rem;
+                font-size: 1rem;
+            }
+            
+            @media (min-width: 951px) {
+                top: 13.5rem;
+                font-size: 1rem;
+            }
+
+            @media (min-width: 1100px) {
+                top: 15.5rem;
+                font-size: 1.1rem;
+            }
         }
 
         .illustration_card-front--cvc {
             position: absolute;
-            top: 13rem;
-            right: 8.5rem;
-            font-size: 1.2rem;
+            right: 2rem;
+            
+            @media (min-width: 451px) {
+                right: 2.2rem;
+            }
+
+            @media (min-width: 951px) {
+                right: 2.4rem;
+            }
         }
     }
 }

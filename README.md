@@ -60,14 +60,6 @@ Los usuarios deberían poder:
 
 ### Lo que aprendí
 
-```html
-<h1>Algunos códigos HTML del que estoy orgulloso</h1>
-```
-```css
-.proud-of-this-css {
-color: papayawhip;
-}
-```
 ```js
 const proudOfThisFunc = () => {
 console.log('🎉')
@@ -77,7 +69,6 @@ console.log('🎉')
 ### Recursos útiles
 
 - [Recurso de ejemplo 1](https://www.example.com): esto me ayudó por XYZ. Me gustó mucho este patrón y lo usaré en el futuro.
-
 
 ## Autor
 

@@ -1,0 +1,42 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.complete {
+    width: 100%;
+
+    .complete_illustration {
+        width: 6rem;
+        margin: 0 auto;
+        
+        @media (min-width: 451px) {
+            width: 8rem;
+        }
+    }
+
+    .complete_title {
+        font-size: 2.6rem;
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+        margin-top: 3rem;
+        
+        @media (min-width: 451px) {
+            font-size: 3rem;
+        }
+    }
+    
+    .complete_message {
+        text-align: center;
+        font-size: 1.4rem;
+        margin-bottom: 3rem;
+        color: v.$darkViolet;
+        letter-spacing: 0px;
+        
+        @media (min-width: 451px) {
+            font-size: 1.6rem;
+        }
+
+        @media (min-width: 951px) {
+            font-size: 1.8rem;
+        }
+    }
+}
