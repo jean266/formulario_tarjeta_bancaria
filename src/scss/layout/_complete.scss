@@ -1,10 +1,15 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
 
-.complete {
-    width: 100%;
+.success {
+    width: 100%;        
+    max-width: 45rem;
+    
+    @media (min-width: 951px) {
+        width: 35rem;
+    }
 
-    .complete_illustration {
+    .success_illustration {
         width: 6rem;
         margin: 0 auto;
         
@@ -13,7 +18,7 @@
         }
     }
 
-    .complete_title {
+    .success_title {
         font-size: 2.6rem;
         text-transform: uppercase;
         margin-bottom: 1.5rem;
@@ -24,7 +29,7 @@
         }
     }
     
-    .complete_message {
+    .success_message {
         text-align: center;
         font-size: 1.4rem;
         margin-bottom: 3rem;

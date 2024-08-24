@@ -14,11 +14,7 @@ Esta es una solución al [desafío de formulario de detalles de tarjeta interact
     - [Enlaces](#enlaces)
   - [Mi proceso](#mi-proceso)
     - [Creado con](#creado-con)
-    - [Lo que aprendí](#lo-que-aprendí)
-    - [Recursos útiles](#recursos-útiles)
   - [Autor](#autor)
-
-**Nota: elimine esta nota y actualice el índice en función de las secciones que conserve.**
 
 ## Descripción general
 
@@ -51,24 +47,11 @@ Los usuarios deberían poder:
 ### Creado con
 
 - Marcado HTML5 semántico
-- Propiedades personalizadas de CSS
 - Flexbox
-- Cuadrícula CSS
+- Grid CSS
 - Flujo de trabajo para dispositivos móviles
 - Gulp
 - SASS
-
-### Lo que aprendí
-
-```js
-const proudOfThisFunc = () => {
-console.log('🎉')
-}
-```
-
-### Recursos útiles
-
-- [Recurso de ejemplo 1](https://www.example.com): esto me ayudó por XYZ. Me gustó mucho este patrón y lo usaré en el futuro.
 
 ## Autor
 

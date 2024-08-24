@@ -1,0 +1,1 @@
+import Form from"./Form.js";const form=new Form;export default class App{constructor(){}initApp(){form.inputVacios(),form.cardNumber(),form.sendForm(),form.dateFormat(),form.validateCVC()}}

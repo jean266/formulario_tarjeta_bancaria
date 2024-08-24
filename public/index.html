@@ -38,8 +38,8 @@
           <p class="illustration_card-front--name" id="illustration_card-name">
             Jane Appleseed
           </p>
-          <p class="illustration_card-front--cvc" id="illustration_card-date">
-            00/00
+          <p class="illustration_card-front--cvc">
+            <span id="illustration_card-date">00</span>/<span id="illustration_card-year">00</span>
           </p>
         </div>
       </div>
@@ -54,50 +54,42 @@
         <div class="form_input">
           <label for="name">Cardholder Name</label>
 
-          <input type="text" name="name" id="name" placeholder="e.g. Jane Appleseed" />
+          <input type="text" class="input" name="name" id="name" placeholder="e.g. Jane Appleseed" tabindex="1" maxlength="20"/>
         </div>
 
         <div class="form_input">
           <label for="number">Card Number</label>
 
-          <input type="text" name="name" id="name" placeholder="e.g. 1234 5678 9123 0000" />
+          <input type="text" class="input" name="number" id="number" placeholder="e.g. 1234 5678 9123 0000" tabindex="2" maxlength="19"/>
         </div>
 
         <div class="form_input form_date">
+
           <div>
             <label for="date">Exp. Date (MM/YY)</label>
 
             <div class="form_input-date">
-              <input type="text" name="month" id="date" placeholder="MM" />
-              <input type="text" name="tyear" placeholder="YY" />
+              <input type="text" class="input" name="month" id="date" placeholder="MM" tabindex="3" maxlength="2"/>
+              <input type="text" class="input" name="year" id="year" placeholder="YY" tabindex="4" maxlength="2"/>
             </div>
           </div>
 
           <div>
             <label for="cvc">CVC</label>
-            <input type="text" name="cvc" id="cvc" placeholder="e.g. 123" />
+            <input type="text" class="input" name="cvc" id="cvc" placeholder="e.g. 123" tabindex="5" maxlength="3"/>
           </div>
         </div>
 
         <div>
-          <input class="submit" type="submit" value="Confirm" />
+          <input class="submit" type="submit" value="Confirm" tabindex="6"/>
         </div>
       </form>
-
-      <!--         <div class="complete">
-        <div class="complete_illustration">
-          <img src="assets/images/icon-complete.svg" alt="illustracion de completado correctamente">
-        </div>
-
-        <h2 class="complete_title">Thank you!</h2>
-
-        <p class="complete_message">We've added your card details</p>
-
-        <button type="button" class="complete_btn">Continue</button>
-      </div> -->
+      
     </section>
     <!-- .container_form -->
   </main>
 </body>
+
+<script type="module" src="build/js/app.js"></script>
 
 </html>
